@@ -36,11 +36,11 @@ class BloodBank {
 
     public void registerDonor(Donor donor) {
         donors.add(donor);
-        System.out.println("✅ Donor registered: " + donor.getName());
+        System.out.println("Donor registered: " + donor.getName());
     }
 
     public void searchByBloodGroup(String bloodGroup) {
-        System.out.println("🔍 Searching for blood group: " + bloodGroup);
+        System.out.println(" Searching for blood group: " + bloodGroup);
         boolean found = false;
         for (Donor d : donors) {
             if (d.getBloodGroup().equalsIgnoreCase(bloodGroup)) {
@@ -49,13 +49,13 @@ class BloodBank {
             }
         }
         if (!found) {
-            System.out.println("⚠️ No donors found with blood group: " + bloodGroup);
+            System.out.println(" No donors found with blood group: " + bloodGroup);
         }
     }
 
     public void listAllDonors() {
         if (donors.isEmpty()) {
-            System.out.println("⚠️ No donors registered yet.");
+            System.out.println(" No donors registered yet.");
             return;
         }
         System.out.println("--- List of Donors ---");
@@ -82,7 +82,7 @@ public class BloodDonationSystem {
             try {
                 choice = Integer.parseInt(sc.nextLine());
             } catch (NumberFormatException e) {
-                System.out.println("⚠️ Invalid input. Please enter a number.");
+                System.out.println("Invalid input. Please enter a number.");
                 continue;
             }
 
@@ -114,13 +114,13 @@ public class BloodDonationSystem {
                     break;
 
                 case 4:
-                    System.out.println("👋 Exiting system. Goodbye!");
+                    System.out.println(" Exiting system. Goodbye!");
                     sc.close();
                     System.exit(0);
                     break;
 
                 default:
-                    System.out.println("⚠️ Invalid choice. Please try again.");
+                    System.out.println(" Invalid choice. Please try again.");
             }
         }
     }
